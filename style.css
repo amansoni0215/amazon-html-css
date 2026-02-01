@@ -219,4 +219,82 @@ ul a {
 }
 .copy-right{
     padding-top: 5px;
+
+}
+/* --- Pehle se likhe hue CSS ke niche ise add karein --- */
+
+/* 1. Shop Section ko Responsive banayein */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align boxes */
+    gap: 15px; /* Boxes ke beech barabar jagah */
+    padding: 20px;
+    background-color: #e2e7e6;
+}
+
+.box {
+    height: auto; /* Fixed height hatayein taaki content adjust ho sake */
+    width: calc(25% - 20px); /* Desktop par 4 boxes */
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    min-width: 250px; /* Choti screen par box bohot patla na ho */
+}
+
+/* 2. Media Queries for Mobile & Tablets */
+
+/* Tablets ke liye (Max 1024px) */
+@media (max-width: 1024px) {
+    .box {
+        width: calc(50% - 20px); /* 2 boxes per row */
+    }
+    .nav-search {
+        width: 400px; /* Search bar thoda chota */
+    }
+}
+
+/* Mobile Screens ke liye (Max 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Navbar items ko niche shift hone dega */
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-search {
+        order: 3; /* Search bar ko logo/signin ke niche le aayega */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .panel {
+        display: none; /* Mobile par extra links chhupa dein ya scrollable banayein */
+    }
+
+    .box {
+        width: 90%; /* Mobile par 1 box per row */
+    }
+
+    .foot-panel2 {
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .foot-panel2 ul {
+        width: 45%; /* Footer links 2 columns mein */
+        margin-left: 10px;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+    .hero-message {
+        font-size: 0.75rem;
+        width: 95%;
+    }
+    .foot-panel2 ul {
+        width: 100%; /* Sab kuch single column mein */
+    }
 }
